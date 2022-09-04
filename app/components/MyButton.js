@@ -4,6 +4,8 @@ import {
   TouchableWithoutFeedback,
   Text,
   View,
+  TouchableHighlight,
+  TouchableOpacity,
 } from "react-native";
 const MyButton = ({ onPress, title, backgroundColor, color }) => {
   const styles = StyleSheet.create({
@@ -22,11 +24,11 @@ const MyButton = ({ onPress, title, backgroundColor, color }) => {
     },
   });
   return (
-    <View style={styles.container}>
-      <TouchableWithoutFeedback onPress={onPress}>
+    <TouchableOpacity onPress={onPress}>
+      <View style={styles.container}>
         <Text style={styles.text}>{title}</Text>
-      </TouchableWithoutFeedback>
-    </View>
+      </View>
+    </TouchableOpacity>
   );
 };
 
